@@ -20,7 +20,13 @@ npm create vite@latest
 │ TypeScript
 
 ### install dependencies
+
+```bash
 npm i
+```
 
 ### to run in development mode
+
+```bash
 npm run dev
+```
