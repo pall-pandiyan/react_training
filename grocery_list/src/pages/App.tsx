@@ -7,7 +7,11 @@ function App() {
   return (
     <>
       <h1 onClick={() => setCount(count + 1)}>Hello App: {count}</h1>
-      <Button color="secondary" onClick={(e) => console.log(e)}>
+      <Button
+        className="btn-primary"
+        color="secondary"
+        onClick={(e) => console.log(e)}
+      >
         Click Me!
       </Button>
     </>

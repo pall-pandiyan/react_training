@@ -10,16 +10,20 @@
 interface Props {
   children: string;
   color?: string;
+  className?: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
-const Button = ({ children, color = "primary", onClick }: Props) => {
+const Button = ({
+  children,
+  color = "primary",
+  className = "",
+  onClick,
+}: Props) => {
   return (
-    <>
-      <button className={"btn btn-" + color} onClick={onClick}>
-        {children}
-      </button>
-    </>
+    <button className={"btn btn-" + color + " " + className} onClick={onClick}>
+      {children}
+    </button>
   );
 };
 
