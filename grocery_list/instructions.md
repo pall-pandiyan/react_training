@@ -18,3 +18,9 @@ npm create vite@latest
 │
 ◇ Select a variant:
 │ TypeScript
+
+### install dependencies
+npm i
+
+### to run in development mode
+npm run dev
