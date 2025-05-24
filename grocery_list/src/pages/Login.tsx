@@ -48,33 +48,25 @@ function Login({
 
   return (
     <form className="row g-3">
-      <div className="col-auto">
-        <input
-          id="email_input"
-          type="text"
-          ref={emailRef}
-          className="form-control"
-          placeholder={emailText}
-        />
-      </div>
-      <div className="col-auto">
-        <input
-          id="password_input"
-          type="password"
-          ref={passwordRef}
-          className="form-control"
-          placeholder={passwordText}
-        />
-      </div>
-      <div className="col-auto">
-        <button
-          type="submit"
-          className="btn btn-primary mb-3"
-          onClick={handleSubmit}
-        >
-          {submitText}
-        </button>
-      </div>
+      <input
+        id="email_input"
+        type="text"
+        ref={emailRef}
+        className="form-control"
+        placeholder={emailText}
+      />
+
+      <input
+        id="password_input"
+        type="password"
+        ref={passwordRef}
+        className="form-control"
+        placeholder={passwordText}
+      />
+
+      <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
+        {submitText}
+      </button>
     </form>
   );
 }
