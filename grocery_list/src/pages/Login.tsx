@@ -47,27 +47,44 @@ function Login({
   }
 
   return (
-    <form className="row g-3">
-      <input
-        id="email_input"
-        type="text"
-        ref={emailRef}
-        className="form-control"
-        placeholder={emailText}
-      />
+    <>
+      <div
+        style={{
+          width: "20%",
+          margin: "15% 40%",
+          border: "solid whitesmoke",
+          padding: "30px",
+        }}
+      >
+        <h1 style={{ fontSize: "20px", marginLeft: "35%" }}>Login</h1>
+        <br />
+        <form className="row g-3">
+          <input
+            id="email_input"
+            type="text"
+            ref={emailRef}
+            className="form-control"
+            placeholder={emailText}
+          />
 
-      <input
-        id="password_input"
-        type="password"
-        ref={passwordRef}
-        className="form-control"
-        placeholder={passwordText}
-      />
+          <input
+            id="password_input"
+            type="password"
+            ref={passwordRef}
+            className="form-control"
+            placeholder={passwordText}
+          />
 
-      <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
-        {submitText}
-      </button>
-    </form>
+          <button
+            type="submit"
+            className="btn btn-primary"
+            onClick={handleSubmit}
+          >
+            {submitText}
+          </button>
+        </form>
+      </div>
+    </>
   );
 }
 
