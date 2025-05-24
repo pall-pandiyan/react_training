@@ -10,11 +10,13 @@
 
 import { useRef } from "react";
 
+// this interface used for the form data.
 interface FormData {
   email: string;
   password: string;
 }
 
+// this interface used for the componment input.
 interface Props {
   emailText?: string;
   passwordText?: string;
@@ -22,6 +24,7 @@ interface Props {
   onSubmit: (data: FormData) => void;
 }
 
+// main component of login page
 function Login({
   emailText = "Email Address",
   passwordText = "Password",
@@ -31,9 +34,11 @@ function Login({
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
 
+  // this function will handle the form submition, convert the form data to object and call the onSubmit provided as input.
   function handleSubmit(
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) {
+    // make sure that the page is not reloaded.
     event.preventDefault();
     onSubmit({
       email: emailRef.current ? emailRef.current.value : "",
