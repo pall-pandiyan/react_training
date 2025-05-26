@@ -7,9 +7,10 @@ interface ItemData {
 
 interface Props {
   items: Array<ItemData>;
+  onDelete: (id: number) => void;
 }
 
-function GroceryTable({ items }: Props) {
+function GroceryTable({ items, onDelete }: Props) {
   return (
     <>
       <table className="table">
@@ -30,7 +31,12 @@ function GroceryTable({ items }: Props) {
               <td>{item.category}</td>
               <td>${item.amount}</td>
               <td>
-                <button className="btn btn-danger">Delete</button>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => onDelete(item.id)}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}

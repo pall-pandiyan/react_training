@@ -25,7 +25,12 @@ function Grocery() {
         </div>
 
         <div className="mb-3 w-50" style={{ border: "solid" }}>
-          <GroceryTable items={groceries} />
+          <GroceryTable
+            items={groceries}
+            onDelete={(id) =>
+              setGroceries(groceries.filter((item) => item.id !== id))
+            }
+          />
         </div>
       </div>
     </>
