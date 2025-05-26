@@ -26,4 +26,5 @@ function GroceryTable() {
     </>
   );
 }
+
 export default GroceryTable;
