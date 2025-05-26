@@ -19,7 +19,6 @@ function GroceryAddForm({ items, onAdd }: Props) {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log("hanling add");
     const data = {
       id: items.length + 1,
       name: nameRef.current ? nameRef.current.value : "",
