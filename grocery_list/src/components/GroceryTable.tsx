@@ -1,6 +1,15 @@
-import items from "../data/items";
+interface ItemData {
+  id: number;
+  name: string;
+  amount: number;
+  category: string;
+}
 
-function GroceryTable() {
+interface Props {
+  items: Array<ItemData>;
+}
+
+function GroceryTable({ items }: Props) {
   return (
     <>
       <table className="table">
@@ -14,7 +23,7 @@ function GroceryTable() {
           </tr>
         </thead>
         <tbody>
-          {items.map((item) => (
+          {items.map((item: ItemData) => (
             <tr key={item.id}>
               <th scope="row">{item.id}</th>
               <td>{item.name}</td>

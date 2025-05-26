@@ -1,7 +1,6 @@
 import { useRef } from "react";
-import items from "../data/items";
 
-interface FormData {
+interface ItemData {
   id: number;
   name: string;
   amount: number;
@@ -9,10 +8,11 @@ interface FormData {
 }
 
 interface Props {
-  onAdd: (data: FormData) => void;
+  items: Array<ItemData>;
+  onAdd: (data: ItemData) => void;
 }
 
-function GroceryAddForm({ onAdd }: Props) {
+function GroceryAddForm({ items, onAdd }: Props) {
   const nameRef = useRef<HTMLInputElement>(null);
   const amountRef = useRef<HTMLInputElement>(null);
   const categoryRef = useRef<HTMLSelectElement>(null);
