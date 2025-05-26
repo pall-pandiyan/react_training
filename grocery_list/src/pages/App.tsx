@@ -1,5 +1,5 @@
 import Login from "./Login";
-import GroceryList from "./GroceryList";
+import Grocery from "./Grocery";
 import { useState } from "react";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   const [showLoginError, setShowLoginError] = useState(false);
 
   if (isLoggedIn) {
-    return <GroceryList />;
+    return <Grocery />;
   }
   return (
     <>
