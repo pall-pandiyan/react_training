@@ -10,6 +10,7 @@ function GroceryTable() {
             <th scope="col">Name</th>
             <th scope="col">Category</th>
             <th scope="col">Amount</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -19,6 +20,9 @@ function GroceryTable() {
               <td>{item.name}</td>
               <td>{item.category}</td>
               <td>${item.amount}</td>
+              <td>
+                <button className="btn btn-danger">Delete</button>
+              </td>
             </tr>
           ))}
         </tbody>
