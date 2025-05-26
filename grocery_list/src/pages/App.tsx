@@ -3,7 +3,7 @@ import Grocery from "./Grocery";
 import { useState } from "react";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [showLoginError, setShowLoginError] = useState(false);
 
   if (isLoggedIn) {
