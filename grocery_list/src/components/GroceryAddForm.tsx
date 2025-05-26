@@ -27,6 +27,17 @@ function GroceryAddForm({ items, onAdd }: Props) {
       category: categoryRef.current ? categoryRef.current.value : "",
     };
     onAdd(data);
+    if (nameRef.current) {
+      nameRef.current.value = "";
+    }
+
+    if (amountRef.current) {
+      amountRef.current.value = "";
+    }
+
+    if (categoryRef.current) {
+      categoryRef.current.value = "";
+    }
   }
 
   return (
@@ -37,6 +48,7 @@ function GroceryAddForm({ items, onAdd }: Props) {
         className="form-control"
         type="text"
         placeholder="Name"
+        required
       />
       <br />
       <input
@@ -45,6 +57,7 @@ function GroceryAddForm({ items, onAdd }: Props) {
         className="form-control"
         type="number"
         placeholder="Amount"
+        required
       />
       <br />
       <select
@@ -52,7 +65,9 @@ function GroceryAddForm({ items, onAdd }: Props) {
         ref={categoryRef}
         className="form-control"
         name="category"
+        required
       >
+        <option value="">--Select Category--</option>
         <option value="one">one</option>
         <option value="two">two</option>
         <option value="three">three</option>
