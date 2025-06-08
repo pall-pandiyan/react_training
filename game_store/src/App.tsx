@@ -1,14 +1,20 @@
-import { HStack, VStack, Box } from "@chakra-ui/react";
+import { HStack, VStack, Box, Text } from "@chakra-ui/react";
 
 function App() {
   return (
     <>
       <HStack>
-        <Box border="1px red solid">Sidebar</Box>
+        <Box>
+          <Text>Sidebar</Text>
+        </Box>
         <Box>
           <VStack>
-            <Box border="1px blue solid">Topbar</Box>
-            <Box border="1px green solid">Main</Box>
+            <Box>
+              <Text>Topbar</Text>
+            </Box>
+            <Box>
+              <Text>Main</Text>
+            </Box>
           </VStack>
         </Box>
       </HStack>
