@@ -5,9 +5,9 @@ function App() {
     <>
       <HStack>
         <Box border="1px red solid">Sidebar</Box>
-        <Box border="1px blue solid">
+        <Box>
           <VStack>
-            <Box border="1px yellow solid">Topbar</Box>
+            <Box border="1px blue solid">Topbar</Box>
             <Box border="1px green solid">Main</Box>
           </VStack>
         </Box>
